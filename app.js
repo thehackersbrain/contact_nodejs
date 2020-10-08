@@ -4,9 +4,7 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 const { Webhook, MessageBuilder } = require('discord-webhook-node');
 const { createHook } = require('async_hooks');
-const discord = new Webhook(
-	'https://discord.com/api/webhooks/763722514668322836/agvQs8hUvlcqSZCq3ut1chuaRxjgPECwmy-G4SB7gqYkus_-9q4ThKOG_ugVYYQCsXxS'
-);
+const discord = new Webhook('xxxxxxxxxxxxxxxxx');
 app = express();
 const port = process.env.PORT || 3000;
 
@@ -24,8 +22,8 @@ app.use(
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: 'theh4ckersbrain@gmail.com',
-		pass: 'Oy[wCnRG;<Qav2]7pTtJ1fl{)',
+		user: 'xxxxxxxxxxxxxxxxxxxxxxxxx',
+		pass: 'xxxxxxxxxxxxxxxxxxxxxx',
 	},
 });
 
