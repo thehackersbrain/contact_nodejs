@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@600;700&display=swap');
+.navbar .navbar-brand {
+	font-family: 'Poppins';
+}
+nav ul li a {
+	font-family: 'Montserrat';
+}
+.form-title {
+	font-family: 'Poppins';
+	font-weight: 600;
+}
+.contact-msg {
+	font-family: 'Montserrat';
+}
+form {
+	font-family: 'Montserrat';
+}
+.alert {
+	font-family: 'Montserrat';
+}
