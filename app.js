@@ -2,6 +2,11 @@
 const express = require('express');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const { Webhook, MessageBuilder } = require('discord-webhook-node');
+const { createHook } = require('async_hooks');
+const discord = new Webhook(
+	'https://discord.com/api/webhooks/763722514668322836/agvQs8hUvlcqSZCq3ut1chuaRxjgPECwmy-G4SB7gqYkus_-9q4ThKOG_ugVYYQCsXxS'
+);
 app = express();
 const port = 8000;
 
@@ -19,8 +24,8 @@ app.use(
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: 'xxxxxxxxxxxxxxxxxxxxxxx',
-		pass: 'xxxxxxxxxxxxxxxxxxxxxxx',
+		user: 'theh4ckersbrain@gmail.com',
+		pass: 'Oy[wCnRG;<Qav2]7pTtJ1fl{)',
 	},
 });
 
@@ -47,7 +52,16 @@ app.post('/', (req, res) => {
 		if (error) {
 			console.log(`Email Failed to ${email},${info.response}`);
 		} else {
-			console.log(`Email Sent to ${email},${info.response}`);
+			const embed = new MessageBuilder()
+				.setTitle('Contact App Message')
+				.setThumbnail(
+					'https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
+				)
+				.addField('Name: ', `${fname} ${lname}`, true)
+				.addField('Email: ', email, true)
+				.setDescription(msg)
+				.setTimestamp();
+			discord.send(embed);
 		}
 	});
 	res.status(200).render('index', {
