@@ -8,7 +8,7 @@ const discord = new Webhook(
 	'https://discord.com/api/webhooks/763722514668322836/agvQs8hUvlcqSZCq3ut1chuaRxjgPECwmy-G4SB7gqYkus_-9q4ThKOG_ugVYYQCsXxS'
 );
 app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // basic app setup
 app.set('view engine', 'ejs');
