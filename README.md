@@ -8,6 +8,7 @@ Contact App in NodeJS with Email Notification support as well as Discord Webhook
 ## Test the live app here
 
 https://contact-app-nodejs.herokuapp.com/
+
 [Contact App](https://contact-app-nodejs.herokuapp.com/)
 
 ## Version
@@ -50,6 +51,7 @@ node app.js
 ## Configurations
 
 Add Email ID and Password of the Email Account you use. (In this, I am using gmail account)
+
 **NOTE: Make Sure to enable `less secure app` in account settings, if you're using gmail account.**
 
 ## Credits:
